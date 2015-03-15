@@ -1,2 +1,36 @@
 ---
 # tasks file for packer
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: packer
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: packer
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: packer
+
+- name: Download Packer
+  get_url: >
+    url={{ packer_url }}
+    dest={{ packer_download_dir }}/packer.zip
+    sha256sum={{ packer_sha256sum }}
+  tags: packer
+
+- name: Create Packer installation directory
+  file: >
+     path={{ packer_install_dir }}
+     owner={{ packer_install_dir_owner }}
+     group={{ packer_install_dir_group }}
+     mode={{ packer_install_dir_mode }}
+     state=directory
+  tags: packer
+
+- name: Unzip Packer to installation directory
+  command: unzip {{ packer_download_dir }}/packer.zip -d {{ packer_install_dir }}
+  args:
+    creates: "{{ packer_install_dir }}/packer"
+  tags: packer

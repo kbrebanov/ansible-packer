@@ -1,2 +1,9 @@
 ---
 # vars file for packer
+
+packer_url: https://dl.bintray.com/mitchellh/packer/packer_{{ packer_version }}_linux_amd64.zip
+packer_download_dir: /root
+packer_install_dir: /opt/packer
+packer_install_dir_owner: root
+packer_install_dir_group: root
+packer_install_dir_mode: "0755"

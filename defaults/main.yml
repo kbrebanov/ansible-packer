@@ -1,2 +1,5 @@
 ---
 # defaults file for packer
+
+packer_version: 0.7.5
+packer_sha256sum: 8fab291c8cc988bd0004195677924ab6846aee5800b6c8696d71d33456701ef6
