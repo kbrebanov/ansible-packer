@@ -1,7 +1,7 @@
 packer
 ======
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.packer-660198.svg)](https://galaxy.ansible.com/list#/roles/3297)
+[![Ansible Role](https://img.shields.io/ansible/role/3297.svg)](https://galaxy.ansible.com/list#/roles/3297)
 
 Installs Packer
 
