@@ -15,8 +15,8 @@ Role Variables
 
 | Name             | Default                                                          | Description                  |
 |------------------|------------------------------------------------------------------|------------------------------|
-| packer_version   | 0.8.1                                                            | Version of Packer to install |
-| packer_sha256sum | b85451aa84f20264829916174267ae1642aec434e9a66c382d41e6c595be59d4 | SHA 256 checksum of package  |
+| packer_version   | 0.8.6                                                            | Version of Packer to install |
+| packer_sha256sum | 2f1ca794e51de831ace30792ab0886aca516bf6b407f6027e816ba7ca79703b5 | SHA 256 checksum of package  |
 
 Dependencies
 ------------
