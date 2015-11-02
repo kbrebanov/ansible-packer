@@ -20,15 +20,6 @@
     sha256sum={{ packer_sha256sum }}
   tags: packer
 
-- name: Create Packer installation directory
-  file: >
-     path={{ packer_install_dir }}
-     owner={{ packer_install_dir_owner }}
-     group={{ packer_install_dir_group }}
-     mode={{ packer_install_dir_mode }}
-     state=directory
-  tags: packer
-
 - name: Unzip Packer to installation directory
   command: unzip {{ packer_download_dir }}/packer.zip -d {{ packer_install_dir }}
   args:
